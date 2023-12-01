@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Laila&family=Playfair+Display:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+        background-repeat: no-repeat;
+        height: 110vh;
+        background-attachment: fixed;
+      }
+
+      hr {
+        border: 1.5px solid white;
+      }
+
+      .cotainer {
+        display: flex;
+        height: 500px;
+        width: 850px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 50px;
+        border: none;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: #63d471;
+        background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .image {
+        display: flex;
+      }
+
+      h1 {
+        font-family: "Gabarito", cursive;
+        color: white;
+      }
+
+      h2 {
+        font-family: "Gabarito", cursive;
+        color: white;
+        text-transform: uppercase;
+        font-size: 50px;
+        cursor: grab;
+        text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      p {
+        font-family: "Gabarito", cursive;
+        color: white;
+        font-size: 20px;
+      }
+
+      h4 {
+        color: rgb(0, 0, 0);
+        font-family: "Gabarito", cursive;
+        text-align: center;
+      }
+
+      input[type="submit"] {
+        width: 50%;
+        height: 30px;
+        font-family: "Gabarito", cursive;
+        background-color: white;
+        color: black;
+        border: none;
+        outline: none;
+        box-shadow: inset 0 0 0 0 green;
+        transition: all 5s ease;
+      }
+
+      input[type="submit"]:hover {
+        /* transform: scale(1.2); */
+        color: white;
+        border: 1px solid transparent;
+        box-shadow: inset 0 200px 0 0 rgb(0, 82, 0);
+        outline-style: none;
+        border-style: none;
+      }
+
+      ::placeholder {
+        color: black;
+        padding-left: 10px;
+        font-size: larger;
+      }
+
+      input[type="text"],
+      [type="password"] {
+        width: 50%;
+        height: 30px;
+        font-family: "Gabarito", cursive;
+        text-transform: capitalize;
+        color: black;
+        border: none;
+        outline: none;
+        box-shadow: rgba(0, 0, 0, 0.25) 100px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      .gallery {
+        color: white;
+        font-family: "Gabarito", cursive;
+        font-size: 25px;
+        text-align: center;
+        text-transform: capitalize;
+        letter-spacing: 3px;
+      }
+
+      .hand {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
+
+      .size img {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        transition: all 0.2s linear;
+      }
+
+      .size img:hover {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        transform: scale(1.1);
+      }
+
+      .font {
+        font-size: 20px;
+        font-family: "Finger Paint", cursive;
+        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      #vi {
+        display: flex;
+        justify-content: center;
+      }
+
+      .out {
+        background-color: #539e86;
+        width: 80%;
+        margin-left: 3cm;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      .in {
+        color: white;
+        font-family: "Gabarito", cursive;
+        letter-spacing: 3px;
+        word-spacing: 2px;
+      }
+
+      .inout img {
+        object-fit: cover;
+        height: 150px;
+      }
+
+      .bord {
+        background-color: #1e3932;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      button {
+        width: 3cm;
+        height: 1cm;
+        border-radius: 20px;
+        border-style: none;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      @media screen and (min-width: 100px) and (max-width: 750px) {
+        html,
+        body {
+          scroll-behavior: smooth;
+          overflow-x: hidden;
+        }
+
+        .cotainer {
+          width: 200%;
+          border: none;
+        }
+
+        form {
+          background-image: url(pic/star.jpg);
+          border-top-right-radius: 12px;
+          border-bottom-right-radius: 10px;
+          width: 50%;
+        }
+
+        .mahe {
+          display: none;
+        }
+
+        p {
+          color: black;
+        }
+
+        h4 {
+          color: white;
+          letter-spacing: 3px;
+          word-spacing: 10px;
+          font-size: 30px;
+        }
+
+        .hand {
+          gap: 10px;
+        }
+
+        .size img {
+          border-radius: 10px;
+          width: 150px;
+          height: 150px;
+        }
+
+        .size img:hover {
+          width: 150px;
+          height: 150px;
+          border-radius: 10px;
+          transform: scale(1.1);
+        }
+
+        video {
+          width: 100%;
+        }
+
+        .out {
+          background-color: #539e86;
+          width: 100%;
+          margin-left: 0cm;
+          display: flex;
+
+          justify-content: space-evenly;
+          align-items: start;
+          border-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h4>Starbucks-Cafe</h4>
+
+    <div class="cotainer">
+      <form class="form">
+        <h1>Welcome Back</h1>
+        <h2 title="Grab now"><b>Star</b>Bucks</h2>
+        <p>LOGIN</p>
+        <input type="text" placeholder="  username" /><br />
+        <input type="password" placeholder="  password" /><br />
+        <input type="submit" value="LOGIN IN" /><br />
+      </form>
+
+      <div class="image">
+        <img src="pic/star.jpg" title=" Strabucks logo" class="mahe" />
+      </div>
+    </div>
+    <br />
+
+    <hr />
+    <h3 class="gallery">Handcrafted Curations</h3>
+    <div class="hand">
+      <div class="size">
+        <img src="pic/Bestseller.jpg" />
+        <h2 class="font">Bestseller</h2>
+      </div>
+      <div class="size">
+        <img src="pic/Food.jpg" />
+        <h2 class="font">Foods</h2>
+      </div>
+      <div class="size">
+        <img src="pic/CoffeeAtHome.jpg" />
+        <h2 class="font">Coffee At Home</h2>
+      </div>
+      <div class="size">
+        <img src="pic/Drinks.jpg" />
+        <h2 class="font">Drinks</h2>
+      </div>
+      <div class="size">
+        <img src="pic/ReadyToEat.jpg" />
+        <h2 class="font">Ready to Eat</h2>
+      </div>
+      <div class="size">
+        <img src="pic/Merchandise.jpg" />
+        <h2 class="font">Merchandise</h2>
+      </div>
+    </div>
+
+    <hr />
+    <h2 style="text-align: center">Learn more about the world of coffee!</h2>
+    <div id="vi">
+      <video
+        controls
+        autoplay
+        muted
+        style="border-radius: 10px"
+        title="Starbucks-Cafe"
+      >
+        <source src="pic/coff.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <br />
+    <hr />
+
+    <div class="out">
+      <div class="in">
+        <h3>Mayuri, our barista has a message for you</h3>
+        <h6>
+          Let us help you create an exceptional season! Bring home the Starbucks
+          merchandise.
+        </h6>
+      </div>
+
+      <div class="inout">
+        <img src="pic/cus.png" />
+      </div>
+    </div>
+    <hr />
+    <div class="bord">
+      <div class="inn">
+        <p>A wordl of reward awits you!Sign up</p>
+      </div>
+      <div class="know">
+        <button>Know more</button>
+      </div>
+    </div>
+
+    <br />
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam iste id
+      perspiciatis exercitationem neque porro accusamus modi rem deserunt culpa
+      quis ex earum at quasi consectetur rerum, atque maxime cupiditate.
+    </p>
+  </body>
+</html>
