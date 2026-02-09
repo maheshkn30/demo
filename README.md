@@ -1,2 +1,3 @@
-# demo
-My first Github Repsitory
+# Demo
+
+My First GitHub Project : Starbucks Landing Page
